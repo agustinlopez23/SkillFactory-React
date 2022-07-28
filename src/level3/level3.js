@@ -106,25 +106,28 @@ export function empiezaConNueve(n) {
 export function todosIguales(arreglo) {
   // Tu código:
 
-  return true;
+  if (arreglo.every((e) => arreglo[0] === e)) {
+    return true;
+  } else return false;
 }
 
 export function mesesDelAño(array) {
   // Tu código:
-
-  return;
 }
 
 export function mayorACien(array) {
   // Tu código:
-
-  return;
+  const mayorACien = array.filter((e) => e > 100);
+  return mayorACien;
 }
 
 export function breakStatement(numero) {
   // Tu código:
-
-  return;
+  for (let i = 0; i < 10; i++) {
+    if (numero === sum) break;
+    const sum = numero + 2;
+    return sum;
+  }
 }
 
 export function continueStatement(numero) {
