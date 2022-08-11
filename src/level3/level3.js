@@ -113,6 +113,11 @@ export function todosIguales(arreglo) {
 
 export function mesesDelAño(array) {
   // Tu código:
+  const meses = ["Marzo", "Noviembre", "Enero"];
+  const arrayAux = array.filter((mes) => meses.includes(mes));
+  return arrayAux.length === 3
+    ? arrayAux
+    : "No se encontraron los meses pedidos";
 }
 
 export function mayorACien(array) {
@@ -123,15 +128,32 @@ export function mayorACien(array) {
 
 export function breakStatement(numero) {
   // Tu código:
-  for (let i = 0; i < 10; i++) {
-    if (numero === sum) break;
-    const sum = numero + 2;
-    return sum;
+  // for (let i = 0; i < 10; i++) {
+  //   if (numero === sum) break;
+  //   const sum = numero + 2;
+  //   return sum;
+  // }
+  const auxArray = [];
+  let suma = numero;
+  let i = 0;
+  while (i < 10) {
+    i++;
+    if (i === suma) break;
+    suma += 2;
+    auxArray.push(suma);
   }
+  return auxArray.length === 10 ? auxArray : "Se interrumpió la ejecución";
 }
 
 export function continueStatement(numero) {
   // Tu código:
 
-  return;
+  const auxArray = [];
+  let suma = numero;
+  for (let i = 1; i <= 10; i++) {
+    if (i === 5) continue;
+    suma += 2;
+    auxArray.push(suma);
+  }
+  return auxArray;
 }
